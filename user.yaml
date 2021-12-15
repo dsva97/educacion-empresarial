@@ -1,0 +1,183 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+  - url: http://localhost:8080/
+    description: Generated server url
+paths:
+  /user:
+    get:
+      tags:
+        - user-controller
+      operationId: userList
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserResponse'
+    post:
+      tags:
+        - user-controller
+      operationId: save
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+  /user/send-email:
+    post:
+      tags:
+        - email-controller
+      operationId: sendEmail
+      parameters:
+        - name: opc
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmailRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+  /user/restore-password:
+    post:
+      tags:
+        - user-controller
+      operationId: restorePassword
+      parameters:
+        - name: cu
+          in: query
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserPasswordRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+  /user/login:
+    post:
+      tags:
+        - user-controller
+      operationId: login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+components:
+  schemas:
+    UserRequest:
+      required:
+        - email
+        - fullName
+        - roleId
+      type: object
+      properties:
+        fullName:
+          type: string
+        email:
+          type: string
+        roleId:
+          type: string
+        creationUserId:
+          type: integer
+          format: int64
+    EmailRequest:
+      required:
+        - email
+      type: object
+      properties:
+        email:
+          type: string
+    UserPasswordRequest:
+      required:
+        - password
+      type: object
+      properties:
+        password:
+          type: string
+        userModification:
+          type: integer
+          format: int64
+    LoginRequest:
+      required:
+        - email
+        - password
+        - roleId
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+        roleId:
+          type: string
+    ModuleResponse:
+      type: object
+      properties:
+        description:
+          type: string
+        uri:
+          type: string
+        state:
+          type: string
+    UserResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        fullName:
+          type: string
+        email:
+          type: string
+        createdUser:
+          type: integer
+          format: int64
+        createdDate:
+          type: string
+          format: date-time
+        updateUser:
+          type: integer
+          format: int64
+        updateDate:
+          type: string
+          format: date-time
+        status:
+          type: string
+        roleId:
+          type: string
+        roleDescription:
+          type: string
+        modules:
+          type: array
+          items:
+            $ref: '#/components/schemas/ModuleResponse'
