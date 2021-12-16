@@ -2,6 +2,8 @@ import React from 'react';
 import searchIcon from '../../assets/HomeIcons/searchIcon.svg';
 import styled from 'styled-components';
 import { HeaderText, UsersAmount } from './style';
+import Buttons2 from '../../components/Buttons2';
+
 
 const TableHeader = ({ amount, headerText, inputText, buttonText }) => {
 
@@ -9,7 +11,7 @@ const TableHeader = ({ amount, headerText, inputText, buttonText }) => {
     const Header = styled.header`
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: space-between
     `;
 
     const Container = styled.section`
@@ -21,17 +23,24 @@ const TableHeader = ({ amount, headerText, inputText, buttonText }) => {
         box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
         border-radius: 20px;
     `
+    const IconInput = styled.div`
+        border: 1px solid #DDD;
+    `
 
     return (
         <Container>
             <Header>
-                <HeaderText>{headerText} <UsersAmount>{amount}</UsersAmount></HeaderText>
                 <div>
-                    <img src={searchIcon} alt='Ícono de busqueda' />
-                    <input type="text" placeholder={inputText} />
+                    <HeaderText>{headerText} <UsersAmount>{amount}</UsersAmount></HeaderText>
                 </div>
-                <div>
-                    <p>{buttonText}</p>
+                <div style={{display:'inline-flex'}}>
+                    <IconInput>
+                        <img src={searchIcon} alt='Ícono de busqueda' />
+                        <input type="text" placeholder={inputText} src={searchIcon} style={{border: 'none'}}/>
+                    </IconInput>
+                    <div>
+                        <Buttons2 buttonText={buttonText} active={true} />
+                    </div>
                 </div>
             </Header>
             <table>

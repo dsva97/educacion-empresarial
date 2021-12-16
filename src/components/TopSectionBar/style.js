@@ -6,6 +6,7 @@ const SectionContainer = styled.section`
     padding-bottom: 10px;
     padding-left: 38px;
     color: ${Colors.C_2};
+    border-bottom: 2px solid #ffffff8f;
 `;
 
 const TextContainer = styled.p`

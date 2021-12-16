@@ -10,6 +10,9 @@ const NavContainer = styled.nav`
     padding-bottom: 20px;
     padding-left: 37px;
     padding-right: 60px;
+    position: relative;
+    box-shadow: 0 0 1px 0 #0000003b;
+    z-index: 2
 `;
 
 // Logo article

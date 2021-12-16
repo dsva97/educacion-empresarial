@@ -1,0 +1,75 @@
+{
+    "applicants": [
+        {
+            "id": 0,
+            "fullName": "Hernan Gomez",
+            "EnrollmentDate":"22 de Julio 2021",
+            "status": "Aceptado",
+            "Details" : "Completo"
+        },
+        {
+            "id": 1,
+            "fullName": "Hernan Gomez",
+            "EnrollmentDate":"23 de Julio 2021",
+            "status": "Rechazado",
+            "Details" : "Incompleto"
+        },
+        {
+            "id": 2,
+            "fullName": "Hernan Gomez",
+            "EnrollmentDate":"25 de Julio 2021",
+            "status": "Pendiente",
+            "Details" : "Falta video"
+        },
+        {
+            "id": 3,
+            "fullName": "Hernan Gomez",
+            "EnrollmentDate":"22 de Julio 2021",
+            "status": "Aceptado",
+            "Details" : "Completo"
+        },
+        {
+            "id": 4,
+            "fullName": "Hernan Gomez",
+            "EnrollmentDate":"22 de Julio 2021",
+            "status": "Aceptado",
+            "Details" : "Completo"
+        },
+        {
+            "id": 5,
+            "fullName": "Hernan Gomez",
+            "EnrollmentDate":"22 de Julio 2021",
+            "status": "Aceptado",
+            "Details" : "Completo"
+        },
+        {
+            "id": 6,
+            "fullName": "Hernan Gomez",
+            "EnrollmentDate":"22 de Julio 2021",
+            "status": "Aceptado",
+            "Details" : "Completo"
+        },
+        {
+            "id": 7,
+            "fullName": "Hernan Gomez",
+            "EnrollmentDate":"22 de Julio 2021",
+            "status": "Aceptado",
+            "Details" : "Completo"
+        },
+        {
+            "id": 8,
+            "fullName": "Hernan Gomez",
+            "EnrollmentDate":"22 de Julio 2021",
+            "status": "Aceptado",
+            "Details" : "Completo"
+        },
+        {
+            "id": 9,
+            "fullName": "Hernan Gomez",
+            "EnrollmentDate":"22 de Julio 2021",
+            "status": "Aceptado",
+            "Details" : "Completo"
+        }
+        
+    ]
+}

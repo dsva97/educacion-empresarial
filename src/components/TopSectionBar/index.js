@@ -6,7 +6,7 @@ const TopSectionBar = ({currentSection}) => {
 
     return (
         <SectionContainer>
-            <TextContainer><TitleSection>{currentSection}</TitleSection> . Inicio <Icon src={topBarIcon} alt="Icono de mayor que" /> {currentSection}</TextContainer>
+            <TextContainer><TitleSection>{currentSection}</TitleSection> . Inicio <Icon src={topBarIcon} alt="Icono de mayor que" /> {currentSection} <Icon src={topBarIcon} alt="Icono de mayor que" /> Postulaciones al programa de mentorías</TextContainer>
         </SectionContainer>
     )
 }
