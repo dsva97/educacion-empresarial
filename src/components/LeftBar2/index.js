@@ -18,11 +18,16 @@ import ReportesIconWhite from '../../assets/HomeIcons/reportesIconWhite.svg'
 import UsuariosIconWhite from '../../assets/HomeIcons/usuariosIconWhite.svg'
 import UsuariosIcon from '../../assets/HomeIcons/usuariosIcon.svg';
 
-import CertificateIconWhite from '../../assets/HomeIcons/certificado-white.svg'
+import CertificateIconWhite from '../../assets/HomeIcons/certificateWhite.svg'
 import CertificateIcon from '../../assets/HomeIcons/certificado.svg';
 
 import ClassIconWhite from '../../assets/HomeIcons/clases-white.svg'
 import ClassIcon from '../../assets/HomeIcons/clases.svg';
+
+import participantsIcon from '../../assets/HomeIcons/participantsIcon.svg'
+import participantsIconWhite from '../../assets/HomeIcons/participantsWhite.svg'
+
+
 
 const LeftBar = () => {
     const navigate = useNavigate();
@@ -96,7 +101,7 @@ const LeftBar = () => {
 
                     <Link to='/home2/participants' style={{ textDecoration: 'none' }}>
                         <LinksItems style={activeSections('/home2/participants')}>
-                            <img src={location.pathname == '/home2/participants' ? UsuariosIconWhite :  UsuariosIcon} alt='Ícono de participantes' />
+                            <img src={location.pathname == '/home2/participants' ? participantsIconWhite :  participantsIcon} alt='Ícono de participantes' />
                             <Space />
                             <LinkText 
                             style={{color: location.pathname == '/home2/participants' ? Colors.White_2 : Colors.C_2}}>Participantes</LinkText>

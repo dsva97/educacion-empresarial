@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { HeaderText, UsersAmount } from './style';
 
 import ImgIcon from '../../assets/HomeIcons/configIcon.svg';
+import ApplicantsIcon from '../../assets/HomeIcons/Applicants.svg';
 
 const CardBottom = () => {
 
@@ -42,17 +43,17 @@ const CardBottom = () => {
     return (
         <HeaderCardB>
             <LinksItems>
-                <img src={ ImgIcon } alt=''/>
+                <img src={ ApplicantsIcon } alt=''/>
                 <Space />
                 <LinkText>Postulantes</LinkText>
             </LinksItems>
             <LinksItems>
-                <img src={ ImgIcon } alt=''/>
+                <img src={ ApplicantsIcon } alt=''/>
                 <Space />
                 <LinkText>Preguntas Frecuentes</LinkText>
             </LinksItems>
             <LinksItems>
-                <img src={ ImgIcon } alt=''/>
+                <img src={ ApplicantsIcon } alt=''/>
                 <Space />
                 <LinkText>Encuestas de satisfacción</LinkText>
             </LinksItems>
