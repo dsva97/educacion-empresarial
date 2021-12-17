@@ -11,7 +11,7 @@ import TopSectionBar from '../../components/TopSectionBar';
 
 // Views
 
-const sections = ['dashboard', 'reports', 'certificates', 'class', 'mentorias', 'participants', 'configuration']
+const sections = ['dashboard', 'reports', 'certificates', 'class', 'mentorias', 'participants', 'configuration','programs']
 
 const Home2 = ({children}) => {
     const [applicants, setApplicants] = useState([]);
@@ -24,7 +24,7 @@ const Home2 = ({children}) => {
         if(!currentRoute) return navigate('/home2/mentoria');
 
         isNotLogged();
-        setApplicants(Applicants.applicants);
+        setApplicants(applicants.applicants);
     }, []);
 
     return (

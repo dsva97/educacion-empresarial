@@ -14,7 +14,7 @@ const Mentoria = () => {
     return (
         <div>
             <Home2>
-                <TopSectionBar currentSection={'Mentorías'}/>
+                <TopSectionBar currentSection={'Mentorías'} subcurrentSection={'Postulaciones al programa de mentorías'}/>
                 <ListCard amount={allApplicants.applicants.length} buttonText="Descargar" inputText='Buscar reporte' headerText="Postulaciones al programa de mentorías" />
             </Home2>
         </div>

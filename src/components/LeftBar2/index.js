@@ -18,6 +18,11 @@ import ReportesIconWhite from '../../assets/HomeIcons/reportesIconWhite.svg'
 import UsuariosIconWhite from '../../assets/HomeIcons/usuariosIconWhite.svg'
 import UsuariosIcon from '../../assets/HomeIcons/usuariosIcon.svg';
 
+import CertificateIconWhite from '../../assets/HomeIcons/certificado-white.svg'
+import CertificateIcon from '../../assets/HomeIcons/certificado.svg';
+
+import ClassIconWhite from '../../assets/HomeIcons/clases-white.svg'
+import ClassIcon from '../../assets/HomeIcons/clases.svg';
 
 const LeftBar = () => {
     const navigate = useNavigate();
@@ -64,7 +69,7 @@ const LeftBar = () => {
 
                     <Link to='/home2/certificates' style={{ textDecoration: 'none' }}>
                         <LinksItems style={activeSections('/home2/certificates')}>
-                            <img src={location.pathname == '/home2/certificates' ? UsuariosIconWhite :  UsuariosIcon} alt='Ícono de certificados' />
+                            <img src={location.pathname == '/home2/certificates' ? CertificateIconWhite :  CertificateIcon} alt='Ícono de certificados' />
                             <Space />
                             <LinkText 
                             style={{color: location.pathname == '/home2/certificates' ? Colors.White_2 : Colors.C_2}}>Certificados</LinkText>
@@ -73,7 +78,7 @@ const LeftBar = () => {
 
                     <Link to='/home2/class' style={{ textDecoration: 'none' }}>
                         <LinksItems style={activeSections('/home2/class')}>
-                            <img src={location.pathname == '/home2/class' ? UsuariosIconWhite :  UsuariosIcon} alt='Ícono de clases' />
+                            <img src={location.pathname == '/home2/class' ? ClassIconWhite :  ClassIcon} alt='Ícono de clases' />
                             <Space />
                             <LinkText 
                             style={{color: location.pathname == '/home2/class' ? Colors.White_2 : Colors.C_2}}>Clases</LinkText>

@@ -2,7 +2,7 @@ import React from 'react';
 import searchIcon from '../../assets/HomeIcons/searchIcon.svg';
 import styled from 'styled-components';
 import { HeaderText, UsersAmount } from './style';
-import LittleButtons from '../../components/LittleButtons';
+import LittleButtons from '../LittleButtons';
 
 
 const Card = ({ Date, Name, Details, Status}) => {
