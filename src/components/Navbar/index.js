@@ -1,10 +1,11 @@
 import React from 'react';
-import { NavContainer, LogoContainer, LogoTitle, UserContainer, UserDataContainer, UserName, UserRol, UserPhoto, NotificationsContainer } from './style';
+import { Notification, NavContainer, LogoContainer, LogoTitle, UserContainer, UserDataContainer, UserName, UserRol, UserPhoto, NotificationsContainer } from './style';
 
 // Assets
 import logoSquare from '../../assets/logoSquare.svg';
 import NotificationIcon from '../../assets/NotificationIcon.svg';
 import personPhoto from '../../assets/personPhoto.svg';
+
 
 const Navbar = () => {
     return (
@@ -14,9 +15,12 @@ const Navbar = () => {
                 <LogoTitle>Educación<br/>Empresarial</LogoTitle>
             </LogoContainer>
             <UserContainer>
-                <NotificationsContainer>
-                    <img src={NotificationIcon} alt="Ícono de Notificación"/>
-                </NotificationsContainer>
+                <div style={{position:'relative'}}>
+                    <Notification></Notification>
+                    <NotificationsContainer>
+                        <img src={NotificationIcon} alt="Ícono de Notificación"/>
+                    </NotificationsContainer>
+                </div>
                 <UserPhoto src={personPhoto} alt='Foto de usuario'/>
                 <UserDataContainer>
                     <div>

@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import { HeaderText, UsersAmount } from './style';
 import LittleButtons from '../../components/LittleButtons';
 
+import PencilIcon from '../../assets/HomeIcons/edit.svg';
+import TrashIcon from '../../assets/HomeIcons/trash.svg';
+
 
 const Card = ({ Date, Name, Details, Status}) => {
 
@@ -59,6 +62,10 @@ const Card = ({ Date, Name, Details, Status}) => {
         color: #707683;
         margin-left: 15px;
     `
+    const Update = styled.div`
+        column-gap: 10px;
+        display:none;
+    `
 
     const Container = styled.section`
         margin: 25px 110px 0 110px;
@@ -66,7 +73,11 @@ const Card = ({ Date, Name, Details, Status}) => {
         padding: 16px;
         box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
         border-radius:5px;
+        &:hover ${Update}{
+            display: flex;
+        }
     `
+
     const IconInput = styled.div`
         border: 1px solid #DDD;
     `
@@ -78,6 +89,18 @@ const Card = ({ Date, Name, Details, Status}) => {
         border-radius: 100px;
         border: 1px solid black;
     `
+
+    
+
+    const ButtonIcon = styled.button`
+        border:none;
+        background: transparent;
+    `
+    const ButtonContainer = styled.div`
+        display:flex;
+        column-gap: 10px;
+    `
+
 
     return (
         <Container>
@@ -94,7 +117,13 @@ const Card = ({ Date, Name, Details, Status}) => {
                     <Photo></Photo>
                     <NameHeader>{Name}</NameHeader>
                 </div>
-                <LittleButtons buttonText={Status} active={true} />
+                <ButtonContainer>
+                    <Update>
+                        <ButtonIcon><img src={PencilIcon} /></ButtonIcon>
+                        <ButtonIcon><img src={TrashIcon} /></ButtonIcon>
+                    </Update>
+                    <LittleButtons buttonText={Status} active={true} />
+                </ButtonContainer>            
             </Header>
         </Container>
     )

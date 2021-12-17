@@ -74,4 +74,14 @@ const UserRol = styled.h6`
 `;
 
 
-export { UserName, UserPhoto, UserRol, UserDataContainer, UserContainer, LogoTitle, NotificationsContainer, NavContainer, LogoContainer };
+const Notification = styled.div`
+    position: absolute;
+    border-radius: 100px;
+    background-color: red;
+    top: 1px;
+    right:1px;
+    width:15px;
+    height:15px;
+`;
+
+export {Notification, UserName, UserPhoto, UserRol, UserDataContainer, UserContainer, LogoTitle, NotificationsContainer, NavContainer, LogoContainer };
