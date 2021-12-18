@@ -90,11 +90,10 @@ const Card = ({ Date, Name, Details, Status}) => {
         border: 1px solid black;
     `
 
-    
-
     const ButtonIcon = styled.button`
         border:none;
         background: transparent;
+        cursor: pointer;
     `
     const ButtonContainer = styled.div`
         display:flex;
